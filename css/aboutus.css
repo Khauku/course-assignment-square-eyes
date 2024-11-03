@@ -318,41 +318,8 @@ h3 { /* Legal Terms */
 
 }
 
-@Media (max-width: 570px) and (min-width: 430px) {
-
-    .logo {
-        font-size: 15px;
-    }
-
-    .menu {
-        font-size: 12px;
-        gap: 30px;
-        margin-left: 80px;
-    }
-
-    .about-section {
-        position: relative;
-        left: 80px;
-        border: none;
-    }
-
-    .about-content {
-        border: none;
-    }
-
-    .terms_text {
-        display: none;
-    }
-
-    .all_rights_text {
-        position: absolute;
-        left: 55%;
-    }
-
-}
-
 /* Media Iphone 14 Pro Max */ 
-@media (max-width: 430px) {
+@media (max-width: 570px) and (min-width: 430px) {
     .header {
         flex-direction: column;
         align-items: flex-start;
