@@ -361,66 +361,203 @@ footer {
 @Media (max-width: 757px) and (min-width: 570px) {
 
     /* Header */
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+        width: 100%;
+    } 
+
     .logo {
+        position: static;
         font-size: 18px;
-        margin-right: 80px;
- 
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-right: 20px;
     }
 
     .menu {
-        font-size: 12px;
-        gap: 30px;
-        margin-left: 40px;
+        font-size: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
 
-    .right-section {
-        position: relative;
-        bottom: 60px;
-        right: 0%;
-        padding-left: 90px;
-        padding-right: 90px;
-
-    }
-
-    h1, 
-    .find-movie-question,
-    .bought-question {
-        position: relative;
-        right: 50px;
-        bottom: 31px;
+    .questions-section {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        top: 40px;
     }
 
     h1 {
-        margin-bottom: 70px;
+        font-size: 18px;
+        margin-bottom: 40px;
+        position: relative;
+        right: 70px;
     }
 
-    h2, 
-    .email-info-section,
+    .find-movie-question,
+    .bought-question {
+        position: relative;
+        font-size: 15px;
+        margin-bottom: 30px;
+        right: 70px;
+    }
+
+    /* Info About Square Eyes */
+    .email-info-section {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    right: 90px;
+    top: 30px;
+    } 
+
     .driven-by-text,
-    .inc-text,
+    .inc-text {
+        position: relative;
+        left: 5px;
+    }
+
     .adress-text {
         position: relative;
-        left: 140px;  
-        top: -55px;
+        left: 5px;
+        padding-bottom: 50px;
+        border-bottom: 1px solid #635D5D;
     }
 
-    .adress-text {
-        line-height: 20px;
-        border-bottom: 0.5px solid #5E5656;
+    h2 {
+    font-size: 15px;
+    text-align: center;
     }
 
-    .bought-question {
-        border-bottom: 0.5px solid #5E5656;
+    /*Square Eyes Contact Form */
+    .section-container {
+        flex-direction: column;
+        position: relative;
+        margin-left: 90px;
+        position: relative;
+        top: 80px;
+        margin-bottom: 120px;
     }
 
-    /* Footer */
+    h3 { /* Contact us */
+        font-family: "Inter", sans-serif;
+        color: #BEC5CC;
+        font-size: 18px;
+        position: relative;
+        left: 35px;
+        top: 50px;
+    }
+
+    .feedback-text {
+        font-size: 12px;
+        padding: 35px;
+        margin-bottom: 0;
+    }
+
+    .feedback-name-boxes {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 0;
+    }
+    
+    .input-firstname, .input-lastname {
+        padding: 5px 7px;
+        max-width: 80%;
+        font-size: 14px;
+        box-sizing: border-box;
+        margin-left: 30px;
+    }
+    
+    .email-box {
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        top: -20px;
+    }
+    
+    .input-email {
+        padding: 5px 7px;
+        max-width: 80%;
+        font-size: 14px;
+        box-sizing: border-box;
+        margin-top: 10px;
+        margin-left: 30px;
+    }  
+    
+    .input-text-box {
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        top: -20px;
+    }
+    
+    .input-text {
+        padding: 5px 7px;
+        max-width: 80%;
+        font-size: 14px;
+        box-sizing: border-box;
+        padding-bottom: 100px;
+        margin-top: 10px;
+        margin-left: 30px;
+    }
+    
+
+    .right-section {
+        width: 90%;
+        justify-content: center;
+        padding: 0;
+        bottom: 0;
+    }
+
+    .feedback-name-boxes {
+        flex-direction: column;
+        gap: 10px;
+        position: relative;
+        bottom: 20px
+    }
+
+    .input-email,
+    .input-text {
+        padding-right: 10px;
+    }
+
+    .cta {
+        position: relative;
+        top: 0px;
+        left: 30px;
+    }
+
+    .footer {
+        position: relative;
+    }
+
+    .fa-instagram, 
+    .fa-x-twitter,
+    .fa-youtube,
+    .fa-tiktok {
+        padding: 5px;
+    }
+
     .terms_text {
         display: none;
     }
 
     .all_rights_text {
+        font-size: 10px;
+        display: flex;
         position: absolute;
-        left: 60%;
+        flex-direction: column;
+        left: 45%;
+    }
+
+    .terms {
+        text-decoration: none;
     }
 
 }
