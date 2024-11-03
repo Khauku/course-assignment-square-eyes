@@ -292,7 +292,6 @@ h3 { /* Legal Terms */
     .logo {
         font-size: 18px;
         margin-right: 80px;
- 
     }
 
     .menu {
@@ -311,6 +310,12 @@ h3 { /* Legal Terms */
         left: 0;
     }
 
+    .about-content {
+        padding: 20px;
+        max-width: 100%;
+        box-sizing: border-box;
+        border: none;
+    }
 
     /* Footer */
     .terms_text {
@@ -378,6 +383,7 @@ h3 { /* Legal Terms */
         padding: 20px;
         max-width: 100%;
         box-sizing: border-box;
+        border: none;
     }
 
     .about-square {
