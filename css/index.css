@@ -331,59 +331,11 @@ footer {
         position: absolute;
         left: 65%;
     }
-
 }
 
-@Media (max-width: 570px) and (min-width: 430px) {
-
-    .logo {
-        font-size: 15px;
-    }
-
-    .menu {
-        font-size: 12px;
-        gap: 30px;
-        margin-left: 80px;
-    }
-
-    .terms_text {
-        display: none;
-    }
-
-    .all_rights_text {
-        position: absolute;
-        left: 65%;
-    }
-
-     /* Search Bar */
-     .search_bar {
-        width: 80%;
-        padding: 10px;
-    }
-
-    .fa-magnifying-glass {
-        position: relative;
-        right: 40px;
-        bottom: 4px;
-    }
-
-    .cta {
-        font-size: 12px;
-        position: relative;
-        top: 430px;
-    }
-
-
-
-    .welcome h1 {
-        font-size: 20px;
-    }
-
-}
-
-/* Media Iphone 14 Pro Max */ 
+/* Media Iphone 14 Pro Max & Small Screens */ 
 /* Header */
-@media (max-width: 430px) {
+@media (max-width: 570px) and (min-width: 430px) {
     .header {
         flex-direction: column;
         align-items: flex-start;
