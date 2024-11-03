@@ -313,7 +313,6 @@ footer {
     .logo {
         font-size: 18px;
         margin-right: 80px;
- 
     }
 
     .menu {
@@ -348,9 +347,10 @@ footer {
         display: none;
     }
 
-    .all_rights_text {
-        position: absolute;
-        left: 65%;
+     .all_rights_text {
+        font-size: 10px;
+        display: flex;
+        margin-left: 10px;
     }
 
      /* Search Bar */
