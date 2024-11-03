@@ -301,8 +301,14 @@ h3 { /* Legal Terms */
     }
 
     .about-section {
+        display: flex;
+        padding: 10px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         position: relative;
-        left: 60px;
+        left: 0;
     }
 
 
@@ -318,7 +324,7 @@ h3 { /* Legal Terms */
 
 }
 
-/* Media Iphone 14 Pro Max */ 
+/* Media Iphone 14 Pro Max and Small tablet */ 
 @media (max-width: 570px) and (min-width: 430px) {
     .header {
         flex-direction: column;
