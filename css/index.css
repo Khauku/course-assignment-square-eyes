@@ -78,7 +78,7 @@ header {
 
 .welcome h1 {
     position: absolute;
-    top: 320px;
+    top: 330px;
     left: 40px;
     font-weight: 300;
 }
@@ -109,7 +109,7 @@ header {
     border: solid 1px;
     font-size: 13px;
     gap: 15px;
-    top: 415px;
+    top: 425px;
     left: 37px;
     margin-right: 10px;
   }
