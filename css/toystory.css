@@ -357,9 +357,8 @@ footer {
         gap: 2px;
         position: relative;
         font-size: 10px;
-        padding-left: 0px;
-        right: 110px;
         top: 40px;
+        right: 130px;
     }
 
     .movie_about h2 {
