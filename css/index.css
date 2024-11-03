@@ -283,12 +283,10 @@ footer {
     color: #fff;
     opacity: 47%;
     font-size: 10px; 
-    display: flex;
-    gap: 15px;
     justify-content: center;
     align-items: center;
     position: absolute;
-    right: 25px;
+    right: 40px;
 }
 
 /* Smaller Screens */
