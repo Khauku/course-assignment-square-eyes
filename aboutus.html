@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Square Eyes">
-    <title>Square Eyes</title>
+    <!--Preconnect Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
+    <!--Font awesome icons-->
     <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script> 
-    <link href="css/aboutus.css" rel="stylesheet">
+    <!--Metadata & stylesheets-->
+    <title>Square Eyes | About Us</title>
+    <meta name="description" content="Learn more about Square Eyes, and how we bring movies from creators to audiences">
+    <link href="/css/pages/aboutus.css" rel="stylesheet">
+    <link href="/css/shared/base.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
 </head>
 <body>
     <!--Square Eyes Logo - Menu-->
@@ -22,7 +24,7 @@
     <nav class="menu">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="movies.html">Movies</a></li>
+            <li><a href="browse.html">Movies</a></li>
             <li><a href="aboutus.html">About us</a></li>
             <li><a href="contact.html">Contact</a></li>  
         </ul>
@@ -55,23 +57,33 @@
           </div>    
         </section>
     </main>
-    <footer>
-        <!--Social Media Icons-->       
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-x-twitter"></i>
-        <i class="fa-brands fa-youtube"></i>
-        <i class="fa-brands fa-tiktok"></i>
-        <!--Terms text-->
-        <section class="terms_text">
-            <h3>Legal terms</h3>
-           <a href="index.html" class="terms">Customize cookies</a>
-           <a href="index.html" class="terms">Terms of use</a>
-           <a href="index.html" class="terms">Guidelines for privacy</a>
+    <footer class="site-footer">
+        <div class="footer-content">
+            <div class="footer-social" aria-label="Social media links">
+            <ul>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" aria-label="Youtube"><i class="fa-brands fa-square-youtube"></i></a></li>
+                <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+            </ul>
+        </div>
+        <!--Legal Links-->
+        <section class="footer-legal" aria-label="Legal information">
+            <h2 class="visually-hidden">Legal terms</h2>
+            <ul>
+                <li><a href="index.html" class="terms">Customize cookies</a></li>
+                <li><a href="index.html" class="terms">Terms of use</a></li>
+                <li><a href="index.html" class="terms">Guidelines for privacy</a></li>
+            </ul>
         </section>
-        <section class="all_rights_text">
-            <h3>All rights Resereved</h3>
-           <p>© 2024 Square Eyes Inc. All Rights Reserved.</p>
-        </section>
-   </footer>
+        <!--Copyright-->
+        <section class="footer-copy" aria-label="Copyright">
+            <h2 class="visually-hidden">All rights reserved</h2>
+            <p>&copy; 2025 Square Eyes Inc. All Rights Reserved</p>
+         </section>
+        </div>     
+    </footer>
+<script src="/js/shared/menu.js"></script>
+<script src="/js/basket/basket.js"></script>
 </body>
 </html>

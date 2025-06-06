@@ -1,0 +1,140 @@
+
+header {
+    background-color: #030610;
+    height: 80px;
+    width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
+}
+
+.header-content {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    height: 100%;
+}
+
+.logo {
+    justify-self: start;
+    font-family: "Koulen", sans-serif;
+    font-style: normal;
+    font-size: 25px;
+    color: #F0E6E6;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.menu {
+    justify-self: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    white-space: nowrap;
+    overflow-x: hidden;
+    box-sizing: border-box;
+    padding-right: 8rem;
+}
+
+.nav-icons {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #F0E6E6;
+    cursor: pointer;
+}
+
+.menu ul {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #F0E6E6;
+}
+
+.menu.expanded ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu a:visited {
+    color: #F0E6E6;
+    text-decoration: none; 
+}
+
+.menu a:hover {
+    color: #9B9FAC;
+    text-decoration: none;
+}
+
+.menu a:active {
+    color: #F0E6E6;
+}
+
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: inline-block;
+        visibility: visible;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+    }
+
+    .menu {
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        width: 28%;
+        background-color:#030610;
+        z-index: 10;
+        transition: all 0.3s ease;
+        background-color: rgba(3, 6, 16, 0.85);
+        backdrop-filter: blur(8px);
+    }
+
+    .menu ul {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1rem;
+        left: 0;
+        align-items: flex-start;
+        padding: 1.5rem 1.2rem 2rem 1.2rem;
+        margin: 0;
+        gap: 1.5rem;
+    }
+
+    .menu ul li {
+        width: 100%;
+    }
+
+     .menu li a {
+        text-align: left;
+        width: 100%;
+        display: block;
+        font-size: 15px;
+        font-weight: 300;
+    }
+
+    .menu.collapsed ul {
+        display: none;
+    }
+
+    .menu.expanded ul {
+        display: flex;
+    }
+
+}

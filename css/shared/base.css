@@ -1,0 +1,66 @@
+
+body {
+    background-color: #000;
+    font-family: "Inter", sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+}
+
+
+/* shared container for spacing */ 
+.container {
+    max-width: clamp(1270px, 100vw, 1900px);
+    width: 100%;
+    box-sizing: border-box;
+    padding-inline: 3rem;
+    margin-inline: auto;
+}
+
+
+/* visually hidden headings for SEO */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow-x: hidden;
+    border: 0;
+    font-size: 1rem;
+}
+
+/* shared styling for movie covers on homepage and moviepage */
+.movie_covers {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding-bottom: 2rem;
+    padding-left: 2.8rem;
+    margin: 0;
+}
+
+.movie_covers li {
+    flex: 0 0 auto;
+}
+
+.movie_covers img {
+    border-radius: 5px;
+    width: 230px;
+    height: 340px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: 2px solid transparent;
+}
+
+.movie_covers li {
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding-inline: 2rem;
+    }
+}
+
+
+

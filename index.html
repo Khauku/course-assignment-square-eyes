@@ -1,86 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A page where you can browse and buy movies">
-    <title>Square Eyes</title>
+    <!--Preconnect Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>  
-    <link href="css/index.css" rel="stylesheet">
-</head>
+    <!--Font awesome icons-->
+    <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script> 
+    <!--Metadata--> 
+    <title>Square Eyes | Browse and Buy Movies Online</title>
+    <meta name="description" content="Welcome to Square Eyes - your go-to website for discovering and purchasing high-quality movies directly from filmmakers.">
+    <!--Stylesheets--> 
+    <link href="/css/index.css" rel="stylesheet">
+    <link href="/css/shared/base.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
+    <link href="/css/shared/api-movies.css" rel="stylesheet">
+    <link href="/css/shared/toast.css" rel="stylesheet">
 
+</head>
 <body>
- <!--Square Eyes Logo - Menu-->
-<header> 
-    <a href="index.html" class="logo">Square Eyes</a>
-    <nav class="menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="movies.html">Movies</a></li>
-            <li><a href="aboutus.html">About us</a></li>
-            <li><a href="contact.html">Contact</a></li>  
-        </ul>
-    </nav>
-</header>
-    <!--Welcome Image-->
-     <main>
-        <section class="welcome">
-            <!--Welcome text and CTA buttons-->
-            <div>
-            <h1>Purchase <span class="highlight">High-Quality</span> movies<br>directly from the people who make them.</h1>
-            <a href="movies.html" class="cta">Browse Movies</a>
-                <button class="cta">Sign Up</button>
-                <p class="img_source">Picture from Shotdeck.com</p>
-            </div>
-            <!--Search Bar-->
-            <div class="search_bar_position">
-              <input type="text" class="search_bar" placeholder="Search for movies">
-              <i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-        </section>
-        <!--Top Movie Scroll-->
-        <section class="top-movies">
-            <h2>top movies this month:</h2>
-        </section>
-        <div class="movie-scroll-container">
-            <div class="top-movies_images">
-             <img src="images/lorem-cover.jpg" alt="Lorem" class="movie_hover">
-             <img src="images/batman-cover.jpg" alt="Batman" class="movie_hover">
-             <img src="images/boy-cover.jpg" alt="The Boy" class="movie_hover">
-             <img src="images/sweetheart-cover.jpeg" alt="Sweetheart" class="movie_hover">
-             <img src="images/godzilla-cover.jpeg" alt="Godzilla Cover" class="movie_hover">
-             <img src="images/hollywood-cover.jpeg" alt="Once Upon A Time in Hollywood Cover" class="movie_hover">
-             <a href="toystory.html">
-                <img src="images/toystory-cover.jpeg" alt="Toy Story" class="movie_hover">
-             </a>
-             <img src="images/addams-cover.jpeg" alt="The Addams Family" class="movie_hover">
+<header class="site-header">
+    <div class="container header-content">
+        <!--Logo-->
+        <a href="index.html" class="logo">Square Eyes</a>
+        <!--Main navigation-->
+        <nav class="menu collapsed" id="main-menu" aria-label="Main site navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Movies</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>  
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <!--Dropdown menu for mobile nav-->
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <!--Shopping Cart-->
+            <div class="basket-container">
+                <button id="basket-toggle" class="basket-button" aria-label="Toggle shopping cart" aria-expanded="false" aria-controls="basket-dropdown">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="basket-count">0</span>
+                </button>
+                <div class="basket-dropdown" id="basket-dropdown" hidden>
+                    <ul id="basket-list" class="basket-list" aria-label="Basket items"></ul>
+                    <button id="checkout-btn" class="checkout-button">Checkout</button>
+                </div>
             </div>
         </div>
-     </main>
-     <footer>     
-        <!--Social Media Icons-->  
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-x-twitter"></i>
-        <i class="fa-brands fa-youtube"></i>
-        <i class="fa-brands fa-tiktok"></i>
-        <section class="terms_text">
-            <!--Terms text-->
-            <h3>Legal terms</h3>
-            <a href="index.html" class="terms">Customize cookies</a>
-            <a href="index.html" class="terms">Terms of use</a>
-            <a href="index.html" class="terms">Guidelines for privacy</a>
-        </section>
-        <section class="all_rights_text">
-            <h3>All rights Resereved</h3>
-            <p>© 2024 Square Eyes Inc. All Rights Reserved.</p>
-         </section>
-    </footer>
+    </div>   
+</header>
+<main>
+    <!--Welcome section-->
+    <section class="welcome">
+        <div class="container welcome-section">
+            <!--Search Bar-->
+            <div class="search_bar_position">
+                <div class="search-wrapper">
+                    <label for="search-input" class="visually-hidden">Search for movies</label>
+                    <input type="text" id="search-input" class="search_bar" placeholder="Search for movies" aria-label="Search for movies">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+            <div class="welcome-content">
+                <h1>
+                    Purchase <span class="highlight">High-Quality</span> movies<br>directly from the people who make them.
+                </h1>
+                <div class="cta-group">
+                    <a href="browse.html" class="cta">Browse Movies</a>
+                    <button class="cta">Sign Up</button>
+                </div>
+                <p class="img_source">Picture from Shotdeck.com</p>
+            </div>
+        </div>
+    </section>
+    <!--Top Movie Scroll-->
+    <section class="top-movies" aria-labelledby="top-movies-heading">
+        <div class="api-wrapper">
+            <div class="container">
+                <h2 id="movies-heading">Newly added</h2>
+            </div>
+        </div>
+        <!--API Movies-->
+        <div id= "api-movie-container"></div>
+        <!--Hardcoded Movies-->
+        <div class="movie-scroll-container" role="region" aria-label="Scrollable list of top movies" tabindex="0">
+            <div class="new-movies-section">
+                <div class="container">
+                    <h2 id="movies-heading">Top movies this week</h2>
+                </div> 
+                <ul class="movie_covers">
+                    <li> 
+                        <img src="images/covers/movies/batman-cover.jpg" alt="Movie cover for Batman" class="movie_hover">
+                    </li>
+                    <li>
+                        <img src="images/covers/movies/hollywood-cover.jpeg" alt="Movie cover for Once Upon A Time in Hollywood" class="movie_hover">
+                    </li>
+                    <li>
+                        <img src="images/covers/movies/sweetheart-cover.jpeg" alt="Movie cover for Sweetheart" class="movie_hover">
+                    </li>
+                    <li>
+                        <img src="images/covers/movies/godzilla-cover.jpeg" alt="Movie cover for Godzilla" class="movie_hover">
+                    </li>
+                    <li>
+                        <img src="images/covers/movies/hobbs&shaw-cover.jpg" alt="Movie cover for Hobbs & Shaw" class="movie_hover">
+                    </li>
+                    <li>
+                        <a href="./product/toystory.html">
+                            <img src="images/covers/movies/toystory-cover.jpeg" alt="Movie cover for Toy Story" class="movie_hover">
+                        </a>
+                    </li>
+                    <li>
+                        <img src="images/covers/movies/addams-cover.jpeg" alt="Movie cover for The Addams Family" class="movie_hover">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="container footer-content">
+        <nav class="footer-social" aria-label="Social media links">
+            <ul>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" aria-label="Youtube"><i class="fa-brands fa-square-youtube"></i></a></li>
+                <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+            </ul>
+        </nav>
+    <!--Legal Links-->
+    <section class="footer-legal" aria-label="Legal information">
+        <h2 class="visually-hidden">Legal terms</h2>
+        <ul>
+            <li><a href="index.html" class="terms">Customize cookies</a></li>
+            <li><a href="index.html" class="terms">Terms of use</a></li>
+            <li><a href="index.html" class="terms">Guidelines for privacy</a></li>
+        </ul>
+    </section>
+    <!--Copyright-->
+      <section class="footer-copy" aria-label="Copyright">
+          <h2 class="visually-hidden">All rights reserved</h2>
+          <p>&copy; 2025 Square Eyes Inc. All Rights Reserved</p>
+      </section>
+    </div>     
+</footer>
+<script src="/js/shared/menu.js"></script>
+<script type="module" src="/js/pages/index.js"></script>
+<script type="module" src="/js/basket/basket.js"></script>
+<!--Pop up message - added to basket-->
+<div id="toast" class="toast">Movie added to basket</div>
 </body>
 </html>

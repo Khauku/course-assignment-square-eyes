@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--Preconnect Google fonts-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
+        <!--Font awesome icons-->
+        <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>
+        <!--Metadata & stylesheets-->
+        <title>Square Eyes | Browse All Movies</title>
+        <meta name="description" content="Explore our full movie collection and discover movies available for purchase">
+        <link href="/css/pages/browse/browse.css" rel="stylesheet">
+        <link href="/css/pages/browse/filter.css" rel="stylesheet">
+        <link href="/css/shared/api-movies.css" rel="stylesheet">
+        <link href="/css/shared/base.css" rel="stylesheet">
+        <link href="/css/main.css" rel="stylesheet">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-content">
+            <!--Logo-->
+            <a href="index.html" class="logo">Square Eyes</a>
+            <!--Main navigation-->
+            <nav class="menu collapsed" id="main-menu" aria-label="Main site navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Movies</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>  
+                </ul>
+            </nav>
+            <div class="nav-icons">
+                <!--Dropdown menu for mobile nav-->
+                <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <!--Shopping Cart-->
+                <div class="basket-container">
+                    <button id="basket-toggle" class="basket-button" aria-label="Toggle shopping cart" aria-expanded="false" aria-controls="basket-dropdown">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="basket-count">0</span>
+                    </button>
+                    <div class="basket-dropdown" id="basket-dropdown" hidden>
+                        <ul id="basket-list" class="basket-list" aria-label="Basket items"></ul>
+                        <button id="checkout-btn" class="checkout-button">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>   
+    </header>
+<main>
+    <!--Search Bar-->
+    <div class="search_bar_position">
+        <div class="search-wrapper">
+            <label for="search-input" class="visually-hidden">Search for movies</label>
+            <input type="text" id="search-input" class="search_bar" placeholder="Search for movies" aria-label="Search for movies">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+    </div>
+    <nav class="genre-filter" aria-label="Genres">
+        <ul>
+            <li><button data-genre="all" class="genre-btn active">All</button></li>
+            <li><button data-genre="action" class="genre-btn">Action</button></li>
+            <li><button data-genre="comedy" class="genre-btn">Comedy</button></li>
+            <li><button data-genre="drama" class="genre-btn">Drama</button></li>
+            <li><button data-genre="horror" class="genre-btn">Horror</button></li>
+            <li><button data-genre="kids" class="genre-btn">Kids</button></li>
+        </ul>
+    </nav>
+    <!--Movie scroll number 1-->
+    <section class="section_movie_container">
+        <h1 class="visually-hidden">Movies to purchase</h1>
+        <div>
+            <h2>Newly added</h2>
+            <div id= "api-movie-container"></div>
+        </div>
+        <div class="container movie_categories">
+            <h2>Featured movies:</h2>
+        </div>
+        <div class="movie-scroll-container" role="region" aria-label="Scrollable list of feautured movies" tabindex="0">
+            <ul class="movie_covers">
+                <li>
+                    <img src="images/covers/movies/hollywood-cover.jpeg" alt="Movie cover for Once Upon A Time in Hollywood" class="movie_hover">
+                </li>
+                <li>
+                    <img src="images/covers/movies/batman-cover.jpg" alt="Movie cover for The Batman" class="movie_hover">
+                </li>
+                <li>
+                    <img src="images/covers/movies/sweetheart-cover.jpeg" alt="Movie cover for Sweetheart" class="movie_hover">
+                </li>
+                <li>
+                    <a href="./product/toystory.html">
+                        <img src="images/covers/movies/toystory-cover.jpeg" alt="Movie cover for Toy Story" class="movie_hover">
+                    </a>
+                </li>
+                <li>
+                    <img src="images/covers/movies/godzilla-cover.jpeg" alt="Movie cover for Godzilla" class="movie_hover">
+                </li>
+                <li>
+                    <img src="images/covers/movies/addams-cover.jpeg" alt="Movie cover for The Addams Family" class="movie_hover">
+                </li>
+                <li>
+                    <img src="images/covers/movies/scream-cover.jpeg" alt="Movie cover for Scream" class="movie_hover">
+                </li>
+                <li>
+                    <img src="images/covers/movies/hobbs&shaw-cover.jpg" alt="Movie cover for Hobbs&Shaw" class="movie_hover">
+                </li>
+            </ul>
+        </div>
+    </section>
+        <!--Movie scroll number 2-->
+        <section class="movie-scroll-container-2">
+            <div class="container movie_categories">
+                <h2>Acadamy award winning movies:</h2>  
+            </div> 
+            <div class="movie-scroll-container" role="region" aria-label="Scrollable list of feautured movies" tabindex="0">
+                <ul class="movie_covers">
+                    <li>
+                        <img src="images/covers/pretend/Silent-cover.jpg" alt="Silent" class="movie_hover">
+                    </li>
+                    <li>
+                        <img src="images/covers/pretend/care-cover.jpg" alt="Care" class="movie_hover">
+                    </li>
+                    <li>
+                        <img src="images/covers/pretend/boy-cover.jpg" alt="The Boy" class="movie_hover">
+                    </li>
+                    <li>
+                        <img src="images/covers/pretend/lorem-cover.jpg" alt="Lorem" class="movie_hover">
+                    </li>
+                    <li>
+                        <img src="images/covers/pretend/dark-cover.jpg" alt="Dark Path" class="movie_hover">
+                    </li>
+                    <li>
+                        <img src="images/covers/pretend/orbita-cover.jpg" alt="Orbita" class="movie_hover">
+                    </li>
+                    <li>
+                        <img src="images/covers/pretend/movienight-cover.jpg" alt="Movie Night" class="movie_hover">
+                    </li>
+                </ul>
+           </div>
+       </section>
+</main>
+<footer class="site-footer">
+    <div class="container footer-content">
+        <nav class="footer-social" aria-label="Social media links">
+            <ul>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" aria-label="Youtube"><i class="fa-brands fa-square-youtube"></i></a></li>
+                <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+            </ul>
+        </nav>
+        <!--Legal Links-->
+        <section class="footer-legal" aria-label="Legal information">
+            <h2 class="visually-hidden">Legal terms</h2>
+            <ul>
+                <li><a href="index.html" class="terms">Customize cookies</a></li>
+                <li><a href="index.html" class="terms">Terms of use</a></li>
+                <li><a href="index.html" class="terms">Guidelines for privacy</a></li>
+            </ul>
+        </section>
+        <!--Copyright-->
+        <section class="footer-copy" aria-label="Copyright">
+            <h2 class="visually-hidden">All rights reserved</h2>
+            <p>&copy; 2025 Square Eyes Inc. All Rights Reserved</p>
+        </section>
+    </div>     
+</footer>
+<script src="/js/shared/menu.js"></script>
+<script type="module" src="/js/basket/basket.js"></script>
+<script type="module" src="/js/pages/browse.js"></script>
+</body>
+</html>

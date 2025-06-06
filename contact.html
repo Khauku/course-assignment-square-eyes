@@ -1,100 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Square Eyes">
-    <title>Contact</title>
+    <!--Preconnect Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
+    <!--Font awesome icons-->
     <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>
-
-    <link href="css/contact.css" rel="stylesheet">
+    <!--Metadata & stylesheets-->
+    <title>Contact Square Eyes | Help with Movie Orders & Support</title>
+    <meta name="description" content="Need help with your movie purchase or account? Contact the Square Eyes support for fast answers, order help, and customer service">
+    <link href="/css/pages/contact.css" rel="stylesheet">
+    <link href="/css/shared/base.css" rel="stylesheet">
+    <link href="/css/main.css" rel="stylesheet">
 </head>
 <body>
-    <!--Square Eyes Logo - Menu-->
-    <header> 
-        <a href="index.html" class="logo">Square Eyes</a>
-    <nav class="menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="movies.html">Movies</a></li>
-            <li><a href="aboutus.html">About us</a></li>
-            <li><a href="contact.html">Contact</a></li>  
-        </ul>
-    </nav>
+    <header class="site-header">
+        <div class="container header-content">
+            <!--Logo-->
+            <a href="index.html" class="logo">Square Eyes</a>
+            <!--Main navigation-->
+            <nav class="menu collapsed" id="main-menu" aria-label="Main site navigation">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="browse.html">Movies</a></li>
+                    <li><a href="aboutus.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>  
+                </ul>
+            </nav>
+            <div class="nav-icons">
+            <!--Dropdown menu for mobile nav-->
+                <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <!--Shopping Cart-->
+                <div class="basket-container">
+                    <button id="basket-toggle" class="basket-button" aria-label="Toggle shopping cart" aria-expanded="false" aria-controls="basket-dropdown">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="basket-count">0</span>
+                    </button>
+                    <div class="basket-dropdown" id="basket-dropdown" hidden>
+                        <ul id="basket-list" class="basket-list" aria-label="Basket items"></ul>
+                        <button id="checkout-btn" class="checkout-button">Checkout</button>
+                    </div>
+                </div>
+            </div>
+        </div>   
     </header>
-    <!--Often asked Questions section-->
-    <main>
-       <section class="questions-section">
-          <div>
-             <h1>Often asked questions:</h1>
-             <div class="find-movie-question">
-                <p>+ Where can I find my movies?</p>
+<main class="support-main">
+    <h1 class="visually-hidden">Help and Support</h1>
+    <section class="support-top" aria-labelledby="faq-heading">
+        <div class="container support-columns">
+            <!--Column 1: FAQ-->
+            <div class="faq-column">
+                <h2 id="faq-heading">Often asked questions:</h2>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false" id="faq1">
+                        + Where can I find my movies?
+                    </button>
+                </div>
+                <div class="faq-item">
+                     <button class="faq-question" aria-expanded="false" id="faq2">
+                        + Can I cancel a purchase?
+                    </button>
+                </div>
+                <div class="faq-item">
+                     <button class="faq-question" aria-expanded="false" id="faq3">
+                        + I can't find the movie I just bougth?
+                    </button>
+                </div>
+                <div class="faq-item">
+                     <button class="faq-question" aria-expanded="false" id="faq4">
+                        + How long do I have access to the movies I buy?
+                    </button>
+                </div>
             </div>
-            <div class="bought-question">
-                <p>+ I can't find the movie I just bougth?</p>
+            <!--Column 2: Contact Info-->
+            <aside class="contact-info-column" aria-labelledby="contact-heading">
+                <h2 class="visually-hidden" id="contact-heading">Contact information</h2>
+                <address>
+                    <p>
+                        <strong>Email:</strong><br>
+                        <a href="mailto:contact@squareeyes.com">Contact@Squareeyes.com</a>
+                    </p>
+                    <p>
+                        <strong>Company:</strong><br>
+                        Square Eyes Inc.<br>
+                        (Org. nr. 900 000 00MVA)
+                    </p>
+                    <p>
+                        <strong>Address:</strong><br>
+                        1234 Elmwood Drive<br>
+                        Springfield, IL 62704<br>
+                        United States
+                    </p>
+                </address>
+            </aside>
+        </div>
+    </section>
+    <!--Contact Form-->
+    <section class="contact-form-section" aria-labelledby="contact-form-heading">
+        <div class="container support-columns">
+            <div class="form-intro">
+                <h2 id="contact-form-heading">Contact us:</h2>
+                <p>
+                    Please feel free to reach out to us with any questions, concerns, or feedback. 
+                    We are committed to providing excellent support and are here to assist you.
+                </p>
             </div>
+            <form action="#" method="post" aria-describedby="contact-form-heading">
+                <div class="feedback-name-boxes">
+                    <label for="first-name" class="visually-hidden">First name</label>
+                    <input type="text" id="first-name" name="first_name" placeholder="First name" required>
+
+                    <label for="last-name" class="visually-hidden">Last name</label>
+                    <input type="text" id="last-name" name="last_name" placeholder="Last name" required>
+                </div>
+
+                <div class="email-box">
+                    <label for="email" class="visually-hidden">Email adress</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+
+                <div class="input-text-box">
+                    <label for="message" class="visually-hidden">Your message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Write your message.."></textarea>
+                </div>
+
+                <button class="cta">Send</button>
+            </form>
         </div>
-       </section>
-       <!--Info About Square Eyes-->
-       <section class="email-info-section">
-         <div>
-           <h2><span class="email-highlight">Email:</span> Contact@Squareeyes.com</h2>
-         <div class="driven-by-text">
-            <p>Square Eyes is driven by:</p>
-         </div>
-         <div class="inc-text">
-            <p><span class="inc-highlight">Square Eyes Inc.</span> (Org. nr. 900 000 00MVA)</p>
-         </div>
-         <div class="adress-text">
-            <p>1234 Elmwood Drive<br>Springfield, IL 62704<br>United States</p>
-         </div>
-        </div>
-       </section>
-       <!--Square Eyes Contact Form-->
-       <section class="section-container">
-         <div class="right-section">
-        <h3>Contact us:</h3>
-        <div class="feedback-text">
-            <p>Please feel free to reach out to us with any questions, concerns,<br>or feedback you may have. We are committed to providing<br>excellent support and are here to assist you with any inquiries</p>
-        </div>
-        <div class="feedback-name-boxes">
-            <input type="text" id="first-name" class="input-firstname" name="first_name" placeholder="First name">
-            <input type="text" id="last-name" class="input-lastname" name="last_name" placeholder="Last name">
-        </div>
-        <div class="email-box">
-            <input type="text" id="email" class="input-email" name="email" placeholder="Email">
-        </div>
-        <div class="input-text-box">
-            <input type="text" id="text-box" class="input-text" name="textbox" placeholder="Write here..">
-        </div>
-        <button class="cta">Send</button>
-        </div>
-       </section>
-    </main>
-    <footer>    
-        <!--Social Media Icons--> 
-        <i class="fa-brands fa-instagram"></i>
-        <i class="fa-brands fa-x-twitter"></i>
-        <i class="fa-brands fa-youtube"></i>
-        <i class="fa-brands fa-tiktok"></i>  
-        <!--Terms text-->
-    <section class="terms_text">
-           <h4>Legal Terms</h4>
-           <a href="index.html" class="terms">Customize cookies</a>
-           <a href="index.html" class="terms">Terms of use</a>
-           <a href="index.html" class="terms">Guidelines for privacy</a>
     </section>
-    <section class="all_rights_text">
-        <h4>All Rights Reserved</h4>
-        <p>© 2024 Square Eyes Inc. All Rights Reserved.</p>
+</main>
+<footer class="site-footer">
+    <div class="container footer-content">
+        <nav class="footer-social" aria-label="Social media links">
+            <ul>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" aria-label="Youtube"><i class="fa-brands fa-square-youtube"></i></a></li>
+                <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+            </ul>
+        </nav>
+    <!--Legal Links-->
+    <section class="footer-legal" aria-label="Legal information">
+        <h2 class="visually-hidden">Legal terms</h2>
+        <ul>
+            <li><a href="index.html" class="terms">Customize cookies</a></li>
+            <li><a href="index.html" class="terms">Terms of use</a></li>
+            <li><a href="index.html" class="terms">Guidelines for privacy</a></li>
+        </ul>
     </section>
-   </footer>
+    <!--Copyright-->
+      <section class="footer-copy" aria-label="Copyright">
+          <h2 class="visually-hidden">All rights reserved</h2>
+          <p>&copy; 2025 Square Eyes Inc. All Rights Reserved</p>
+      </section>
+    </div>     
+</footer>
+<script src="/js/shared/menu.js"></script>
+<script src="/js/basket/basket.js"></script>
 </body>
 </html>

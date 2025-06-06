@@ -1,0 +1,70 @@
+
+/* Search Bar */
+.search_bar_position {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+    margin-bottom: 3.5rem;
+}
+
+.search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+.search_bar {
+    padding: 14px 50px 14px 30px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    color: #BFABAB;
+    font-size: 13px;
+    background: rgba(25, 32, 53, 0.7);
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search_bar:focus {
+    outline: none;
+    border: 2px solid #BFABAB;
+}
+
+.search-wrapper i.fa-magnifying-glass {
+    color: #A09393;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+}
+
+/* Movie scroll containers */
+.movie_categories {
+    font-family: "Inter", sans-serif;
+    color: #DDD4D4;
+}
+
+.movie_categories h2 {
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 0;
+    margin-top: 2.5rem;
+}
+
+/* Scroll Container */ 
+.movie-scroll-container {
+    background-color: #000;
+    overflow-x: auto;
+}
+
+.movie-scroll-container-2 {
+    margin-bottom: 3rem;
+}
+
+.movie_hover:hover {
+    border-color: #fff;
+}
