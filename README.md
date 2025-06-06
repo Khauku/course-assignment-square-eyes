@@ -1,6 +1,6 @@
 # Square Eyes 
 
-**Square Eyes** is an interactive movie store developed as part of a course assignment. The goal was to create a responsive website where users can browse movies, view individual product details, filter by categories, add movie to cart, and complete a checkout. 
+Square Eyes is an interactive movie store developed as part of a course assignment. The goal was to create a responsive website where users can browse movies, view individual product details, filter by categories, add movie to cart, and complete a checkout.
 
 ## Project Features 
 - Browse dynamically loaded movies from API
