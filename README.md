@@ -19,10 +19,10 @@ Square Eyes is an interactive movie store developed as part of a course assignme
 - Noroff API Movies
 
 ## Folder Structure
-/index.html- Homepage with product list
-/contact.html - Contact page
-/about.html - About Square Eyes page
-/product/toystory.html - hardcoded movie detail page
-/movie-details/index.html - Dynamic product detail page
-/checkout/index.html - Checkout form and cart summary
-/checkout/confirmation/index.html - Order confirmation page
+-/index.html- Homepage with product list
+-/contact.html - Contact page
+-/about.html - About Square Eyes page
+-/product/toystory.html - hardcoded movie detail page
+-/movie-details/index.html - Dynamic product detail page
+-/checkout/index.html - Checkout form and cart summary
+-/checkout/confirmation/index.html - Order confirmation page
