@@ -1,4 +1,5 @@
 
+import "../basket/basket.js"
 import { getQueryParam } from "../shared/utils.js";
 
 const productId = getQueryParam("id");

@@ -114,7 +114,7 @@ export async function redirectToCheckout() {
 
         localStorage.setItem("selectedCheckoutMovie", JSON.stringify(selectedMovie));
 
-        window.location.href = "checkout/index.html";
+        window.location.href = "../checkout/index.html";
     } catch(error) {
         alert("An unexpected error occurred. Please try again.");
     } finally {
