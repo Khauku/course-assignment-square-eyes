@@ -1,130 +1,150 @@
-
-
-/* Toy Story Checkout Cart */
-.grid-container {
-    display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: 
-    "left-column right-column-top"
-    "left-column right-column-bottom";
-    grid-gap: 20px;
-    background-color: #000;
-    max-width: 1200px;
-    margin: auto;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.left-column {
-    grid-area: left-column;
-    display: flex;
-    flex-direction: column;
-    border: 0.5px solid #5E5656;
+/* shared color & font style */
+h1,
+h2,
+.movie-text-details,
+.checkout-meta,
+.square-logo,
+.after-purchase-text,
+.after-purchase-text,
+.digital-delivery,
+aside,
+aside h3,
+aside h4,
+aside p,
+.right-column-top h4,
+.right-column-bottom h4 {
+    color: var(--text-color);
+    font-family: var(--font-base);
+}
+
+#checkout-title,
+.square-logo {
+    font-family: var(--font-heading);
+}
+
+#payment-heading,
+#credit-card-heading {
+    margin: 2rem 0 0.5rem 0;
+}
+
+.checkout-heading {
     background-color: #000;
-    border-radius: 15px;
-    width: 500px;
-    height: 642px;
-    position: absolute;
-    left: 10%;
-    top: 138px;
 }
 
 h1 { /* Confirm your purchase */ 
-    font-family: "Inter", sans-serif;
-    font-size: 20px;
+    font-size: 1.80rem;
     font-weight: 400;
-    color: #fff;  
-    position: relative;
-    top: 60px;
-    left: 100px;
+    margin-top: 1.5rem;
+    padding: 0;
 }
 
-.toystory-cover1 {
-    height: 100px;
+h2 { /* Payment Methods */ 
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 2rem 0 0.10rem 0.10rem;
+}
+
+
+
+/* API Movies */
+.checkout-movie-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 2rem 0 1rem 0;
+}
+
+.checkout-movie-info img {
     width: 70px;
-    border-radius: 30px;
-    display: flex;
-    margin: 0;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
     position: relative;
-    left: 100px;
-    top: 70px;
+    margin-bottom: 50px;
 }
 
-h2 { /* Toy Story Title */
-    font-family: "Koulen", sans-serif;
-    font-size: 18px;
-    color: #D8D063;
+.movie-text-details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* price */
+.checkout-meta {
+    font-size: 14px;
     position: relative;
-    bottom: 40px;
+    margin-top: 0;
+    padding-bottom: 60px;
+}
+
+/* grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "left right";
+    max-width: 1300px;
+    gap: 20px;
+    background-color: #000;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.left-column {
+    grid-area: left;
+    display: flex;
+    flex-direction: column;
+    border: 0.5px solid #5E5656;
+    border-radius: 10px;
+    width: 100%;
+    position: static;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+.right-wrapper {
+    grid-area: right;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.right-column-top {
     display: flex;
     align-items: center;
-    justify-content: center;
-    right: 38px;
-
+    flex-direction: row;
+    border: 0.5px solid #5E5656;
+    border-radius: 15px;
+    padding: 3rem;
+    background-color: #000;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+    padding-left: -3rem;
 }
 
-.res-icons { /* resolution icons */
+.right-column-bottom {
     display: flex;
-    gap: 0px;
-    position: relative;
-    bottom: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 50px;
-}
-
-.hd {
-    width: 15px;
-    height: 15px;
-    border-radius: 6px;
-    border: solid 1px;
-    border-color: #fff;
-    opacity: 60%;
-}
-
-.fk {
-    width: 15px;
-    height: 15px;
-    border-radius: 1px;
-    border-radius: 6px;
-    border: solid 1px;
-    border-color: #fff;
-    opacity: 60%;
-    margin-right: 5px;
-}
-
-.info { /* Animation - Duration - published year */
-    font-family: "Inter", sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    color: #fff; 
-    opacity: 46%;
-    display: flex;
-    white-space: nowrap;
-    gap: 15px;
-    position: relative;;
-    left: 180px;
-    bottom: 55px;
+    flex-direction: column;
+    border: 0.5px solid #5E5656;
+    padding: 5rem 2rem;
+    background-color: #000;
+    border-radius: 15px;
+    box-sizing: border-box;
 }
 
 /* Payment Methods */
-h3 { /* Payment Methods */ 
-    font-family: "Inter", sans-serif;
-    font-size: 15px;
-    font-weight: 300;
-    color: #fff; 
-    position: relative;
-    left: 95px;
-    top: 15px;;
-}
-
 .card-icons { 
     display: flex;
     align-items: center;
-    gap: 7px;
-    position: relative;
-    left: 95px;
-    top: 15px;
+    gap: 0.5rem;
+    margin: 0.5rem 0 0 0;
 }
 
 .paypal {
@@ -142,52 +162,55 @@ h3 { /* Payment Methods */
     height: 22px;
 }
 
-/* Credit Card Checkout Form */
-h4 { /* Credit Card text */
-    font-family: "Inter", sans-serif;
-    font-size: 13px;
-    font-weight: 300;
-    color: #fff; 
-    position: relative;
-    left: 95px;
-    top: 40px;
-}
-
+/* checkout form */
 .checkout-form {
-    position: relative;
-    top: 35px;
-    left: 90px;
+    width: 100%;
+    margin-top: 1rem;
 }
 
-.first-last-name-boxes {
+.checkout-form fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.first-last-name-boxes,
+.date-security-boxes {
     display: flex;
-    gap: 15px;
-    margin-bottom: 10px;
+    gap: 1rem;
+    width: 100%;
 }
 
-.input-firstname, .input-lastname {
-    border-radius: 15px;
-    background-color: #4E4E5E;
+.input-firstname,
+.input-lastname,
+.input-expiry-date,
+.input-security-code {
+    flex: 1;
+    border-radius: 10px;
     opacity: 50%;
-    padding: 8px;
-    padding-right: 10px;
-    padding-left: 10px;
-    border: 2px solid transparent;
+    padding: 0.8rem 1rem;
+    border: 1px solid transparent;
+    background-color: #4E4E5E;
 }
 
 .cardnumber-box {
     display: flex;
-    margin-bottom: 10px;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0;
 }
 
 .input-card-number {
-    border-radius: 15px;
+    flex: 1;
+    width: 100%;
+    border-radius: 10px;
     background-color: #4E4E5E;
     opacity: 50%;
-    padding: 8px;
-    border: 2px solid transparent;
-    padding-left: 10px;
-    padding-right: 190px;
+    padding: 0.8rem 1rem;
+    border: 1px solid transparent;
+    max-width: 100%;
+    box-sizing: border-box;
 }
 
 .date-security-boxes {
@@ -196,19 +219,17 @@ h4 { /* Credit Card text */
     position: relative;
 }
 
-.input-expiry-date, .input-security-code {
-    border-radius: 15px;
-    background-color: #4E4E5E;
-    opacity: 50%;
-    padding: 8px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border: 2px solid transparent;
-}
-
 .input-firstname:focus, .input-lastname:focus, .input-card-number:focus, .input-expiry-date:focus, .input-security-code:focus {
     outline: none;
     border: 2px solid #ffffff;
+}
+
+/* cta */
+.cta-position {
+    display: flex;
+    position: static;
+    align-items: left;
+    margin-top: 1rem;
 }
 
 .cta {
@@ -220,586 +241,96 @@ h4 { /* Credit Card text */
     border-radius: 9px;
     border: solid 1px;
     font-size: 13px;
+    text-decoration: none;
   }
 
 .cta:hover {
     background-color: #fff;
     color: #000;
-}
-
-.cta-position {
-    position: relative;
-    top: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 95px;
-    
+    text-decoration: none;
 }
 
 /* After Purchase Info */
-.right-column-top {
-    grid-area: right-column-top;
-    align-items: center;
-    border: 0.5px solid #5E5656;
-    border-radius: 15px;
-    width: 450px;
-    height: 250px;
-    margin: 70px;
-    padding: 20px;
-    background-color: #000;
-    position: relative;
-    left: 600px;
-    bottom: 30px;
-}
-
 .square-logo {
-    font-family: "Koulen", sans-serif;
-    font-style: normal;
-    font-size: 20px;
-    color: #fff;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    background-color: #272E3D;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
     text-align: center;
-    top: 60px;
-    left: 30px;
+    font-size: 0.8rem;
+    border-radius: 50%;
+    font-style: bold;
+    width: 100px;
+    height: 100px;
+    background-color: #272E3D;
     white-space: nowrap;  
-}
-
-h5 { /* After Purchase*/
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
-    color: #fff;
-    position: relative;
-    top: 20px;
+    flex-shrink: 0;
+    text-transform: uppercase;
 }
 
 .after-purchase-text {
-    font-family: "Inter", sans-serif;
     font-weight: 200;
     font-style: normal;
-    font-size: 14px;
-    color: #fff;
-    position: relative;
-    left: 180px;
-    bottom: 80px;
+    font-size: 1rem;
+    margin-left: 2rem;
 }
 
-/* After Purchase Terms */
-.right-column-bottom {
-    grid-area: right-column-bottom;
-    display: flex;
-    flex-direction: column;
-    width: 470px;
-    height: 320px;
-    padding-left: 20px;
-    border: 0.5px solid #5E5656;
-    background-color: #000;
-    border-radius: 15px;
-    position: relative;
-    left: 670px;
-    bottom: 70px;
-}
-
-.digital-delivery h6 {
-    font-family: "Inter", sans-serif;
+.right-column-top h4,
+.right-column-bottom h4 {
     font-weight: 300;
-    font-style: normal;
-    font-size: 13px;
-    color: #fff;
-    opacity: 71%;
-    position: relative;
+    font-size: 1rem;
+    opacity: 0.80;
+    margin-bottom: 0.25rem;
+
+}
+
+.right-column-bottom article {
+    margin-bottom: 1.5rem;
+}
+
+.right-column-bottom article p {
+    font-weight: 200;
+    font-size: 0.80rem;
+    opacity: 0.80;
+    line-height: 1.6;
     margin: 0;
-    top: 45px;
-    left: 50px;
-}
-
-.purchase-rights h6 {
-    font-family: "Inter", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-    font-size: 13px;
-    color: #fff;
-    opacity: 71%;
-    position: relative;
-    margin: 0;
-    top: 40px;
-    left: 50px;
-}
-
-.delivery-text {
-    font-family: "Inter", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 11px;
-    color: #fff;
-    opacity: 71%;
-    line-height: 20px;
-    padding-left: 50px;
-    position: relative;
-    top: 12%;
-}
-
-.purchase-text {
-    font-family: "Inter", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 11px;
-    color: #fff;
-    opacity: 71%;
-    line-height: 20px;
-    padding-left: 50px;
-    position: relative;
-    top: 10%;
 }
 
 .terms-refund-text {
-    font-family: "Inter", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 10px;
-    color: #fff;
-    opacity: 71%;
-    padding-left: 50px;
-    position: relative;
-    top: 10%;
-}
-
-.highlight-terms, .highlight-refund {
-    color: #7184E9;
-    font-style: normal;
+    font-weight:  100;
+    font-size: 1rem;
+    opacity: 0.80;
+    margin-top: 0.5rem;
 }
 
 
-@Media (max-width: 1180px) and (min-width: 757px)  {
+.highlight-terms, 
+.highlight-refund {
+    color: #8998EB;
+    font-weight: 300;
+}
 
+@media (max-width: 1260px) {
     .grid-container {
-        gap: 20px;
-        padding: 20px;
-    
-    }
-    
-    .left-column {
-        position: relative;
-        top: 10px;
-        left: 10px;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+        "left"
+        "right";
     }
 
-    .right-column-top {
-        position: relative;
-        padding: 10px;
-        bottom: 723px;
-        left: 480px;
-    }
-
+    .left-column,
+    .right-wrapper,
+    .right-column-top,
     .right-column-bottom {
-        position: relative;
-        padding: 5px;
-        padding-right: 1px;
-        padding-bottom: 12px;
-        bottom: 765px;
-        left: 550px;
+        width: 100%;
+        max-width: 100%;
+        padding: 1.5rem;
+        box-sizing: border-box;
     }
-
-    .logo {
-        margin-right: 80px;
-        font-size: 18px;
-    }
-
 }
 
-@Media (max-width: 757px) and (min-width: 570px) {
-
-    .logo {
-        font-size: 18px;
-        margin-right: 80px;
- 
-    }
-
-    .menu {
-        font-size: 12px;
-        gap: 30px;
-    }
-
-    .grid-container {
-        gap: 20px;
-        padding: 20px;
-    
-    }
-    
-    .left-column {
-        position: relative;
-        top: 10px;
-        left: 10px;
-    }
-
-    .right-column-top {
-        position: relative;
-        left: -40px;
-        top: -40px;
-        padding-right: 30px;
-    }
-
-    .right-column-bottom {
-        position: relative;
-        padding-right: 10px;
-        padding-top: 20px;
-        padding-bottom: 20px;
-        left: 30px;
-    }
-
-}
-
-@Media (max-width: 570px) and (min-width: 430px) {
-
-    .logo {
-        font-size: 15px;
-    }
-
-    .menu {
-        font-size: 12px;
-        gap: 30px;
-        margin-left: 80px;
-    }
-
-    .grid-container {
-        gap: 20px;
-        padding: 20px;
-    
-    }
-    
-    .left-column {
-        position: relative;
-        top: 10px;
-        left: 10px;
-        width: 450px;
-    }
-
-    .right-column-top {
-        position: relative;
-        width: 410px;
-        left: -40px;
-        top: -40px;
-    }
-
-    .right-column-bottom {
-        position: relative;
-        width: 430px;
-        left: 30px;
-    }
-
-    h1 { /* Confirm your purchase */  
-        position: relative;
-        left: 70px;
-   
-    }
-    
-    .toystory-cover1 {
-        position: relative;
-        left: 70px; 
-    }
-    
-
-    .info { /* Animation - Duration - published year */
-        position: relative;
-        left: 155px; 
-        
-    }
-
-    h3 { /* Payment Methods */ 
-        position: relative;
-        left: 70px;   
-    }
-    
-    .card-icons { 
-        position: relative;
-        left: 65px;  
-    }
-
-    /* Credit Card Checkout Form */
-    h4 { /* Credit Card text */
-        position: relative;
-        left: 65px;
-   
-    }
-
-    .checkout-form {
-        position: relative;
-        left: 60px;
-    
-    }   
-
-}
-
-
-/* Media Iphone 14 Pro Max */ 
 @media (max-width: 430px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-        width: 100%;
-    } 
-
-    .logo {
-        position: static;
-        font-size: 15px;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-right: 20px;
-    }
-
-    .menu {
-        font-size: 12px;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        padding-left: 5px;
-    }
-
-    .menu ul {
-        gap: 0px;
-        padding: 0;
-        margin: 0;
-    }
-
-    body {
-        overflow-x: hidden;
-        box-sizing: border-box;
-    }
-
-    /* Toy Story Checkout Cart */
-    .grid-container {
-        display: grid;
-        grid-auto-flow: row;
-        gap: 10px;
-        left: 5px;
-        width: 100%;
-        max-width: 100vh;
-        box-sizing: border-box;
-    }
-
     .left-column {
-        position: relative;
-        padding: 30px;
-        margin: 0 auto;
-        margin: 0;
-        left: 20px;
-        top: 10px;
-        width: 100%;
-        max-width: 100vh;
-        box-sizing: border-box;
-        
-    }
-
-    h1 { /* Confirm your purchase */ 
-        font-size: 16px; 
-        position: relative;
-        left: 10px;
-        top: 20px;
-    }
-
-    
-    h2 { /* Toy Story Title */
-        display: flex;
-        position: relative;
-        align-items: center;
-        justify-content: center;
-        bottom: 85px;
-        overflow-x: hidden;
-        left: 8px;
-    }
-
-    .info {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        left: 40px;
-        bottom: 90px;
-    }
-
-    .res-icons {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        bottom: 95px;
-        left: -5px;
-
-    }
-
-    .toystory-cover1 {
-        position: relative;
-        left: 10px;
-        top: 20px;
-
-    }
-    
-    /* Payment Methods */
-    h3 { /* Payment Methods */ 
-        font-size: 15px;
-        position: relative;
-        left: 10px;
-        top: -30px;    
-    }
-
-    .card-icons {
-        font-size: 15px;
-        position: relative;
-        left: 7px;
-        top: -30px;
-    }
-
-    /* Credit Card Checkout Form */
-    h4 { /* Credit Card text */
-        font-size: 13px;
-        position: relative;
-        left: 12px;
-        top: 0px;
-        margin-bottom: 0;
-    }
-
-    .checkout-form {
-        position: relative;
-        left: 5px;
-    }
-
-    .first-last-name-boxes,
-    .date-security-boxes,
-    .cardnumber-box  {
-        justify-content: center;
-        gap: 10px;
-        position: relative;
-        top: -20px;
-    }
-
-    .input-firstname, .input-lastname {
-        padding: 7px 9px;
-        padding-right: 10px;
-        font-size: 10px;
-        box-sizing: border-box;
-    }
-
-    .input-card-number {
-        font-size: 10px;
-        box-sizing: border-box;
-        width: 100%;
-    } 
-
-    .input-expiry-date, 
-    .input-security-code {
-        padding: 7px 9px;
-        padding-right: 11px;
-        font-size: 10px;
-        box-sizing: border-box;
-    }
-
-
-    .cta {
-        display: block;
-        font-size: 12px;
-        position: relative;
-        right: 60px;
-        bottom: 20px;
-        left: 30px;
-    }
-
-
-    /* After Purchase Info */
-    .right-column-top {
-        position: relative;
-        width: 75%;
-        height: 50%;
-        padding: 10px;
-        margin: 0;
-        left: 38px;
-        top: 10px;
-    }
-
-    .square-logo {
-        font-size: 10px;
-        width: 60px;
-        height: 60px;
-        justify-content: center;
-        align-items: center;
-        position: relative;
-        white-space: nowrap; 
-        top: 25px; 
-    }
-
-    h5 {
-        display: none;  
-    }  
-
-    .after-purchase-text {
-        font-size: 10px;
-        font-weight: 100;
-        position: relative;
-        bottom: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        left: 20px;
-    }
-
-    /* After Purchase Terms */
-    .right-column-bottom {
-        position: relative;
-        width: 73%;
-        height: auto;
-        padding: 15px;
-        left: 35px;
-        top: 30px;
-        margin-bottom: 90px;
-}
-
-    .digital-delivery h6 {
-        font-weight: 300;
-        font-size: 10px;
-        position: relative;
-        left: 35px;
-        top: 5px;
-    }
-
-    .purchase-rights h6 {
-        font-weight: 300;
-        font-size: 10px;
-        position: relative;
-        left: 35px;
-        top: 5px;
-    }
-
-    .delivery-text {
-        font-weight: 100;
-        font-size: 9px;
-        position: relative;
-        left: -15px;
-    }
-
-    .purchase-text {
-        font-weight: 100;
-        font-size: 9px;
-        position: relative;
-        left: -15px;
-    }
-
-    .terms-refund-text {
-        font-weight: 100;
-        font-size: 9px;
-        position: relative;
-        left: -15px;
+        border: none;
     }
 
 }

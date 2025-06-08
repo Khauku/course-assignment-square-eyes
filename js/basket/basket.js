@@ -42,7 +42,7 @@
             basketCount.textContent = basket.length;
 
             if(basket.length ===0) {
-                basketList.innerHTML = "<p style='text-align:center; color: #333;'>Your basket is empty</p>";
+                basketList.innerHTML = "<p>Your basket is empty</p>";
             } else {
                 basket.forEach((movie, index) => {
                     const li = document.createElement ("li");

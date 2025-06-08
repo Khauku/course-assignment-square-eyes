@@ -1,4 +1,4 @@
-import { showLoadingIndicator } from "./utils.js";
+import { showLoadingIndicator } from "../shared/utils.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const cover = document.getElementById("checkout-cover");

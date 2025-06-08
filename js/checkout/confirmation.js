@@ -1,4 +1,4 @@
-import { showLoadingIndicator } from "./utils.js";
+import { showLoadingIndicator } from "../shared/utils.js";
 
 document.addEventListener("DOMContentLoaded", () => {
     const cover = document.getElementById("confirmation-cover");
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (!movie || !movie.id) {
             alert("No movie selected.");
-            window.location.href= "../../index.html";
+            window.location.href= "../index.html";
             return;
         }
 

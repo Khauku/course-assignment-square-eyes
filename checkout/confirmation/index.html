@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Metadata-->
+    <title>Purchase Confirmed | Watch Your Movie Now | Square Eyes</title>
+    <meta name="description" content="Thank you for your purchase! Your movie is now available to stream under your profile on Square Eyes. Enjoy watching instantly">
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
+    <!--Font Awesome Icons-->
+    <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>  
+    <!--Stylesheet-->
+    <link href="../../css/pages/confirmation.css" rel="stylesheet">
+    <link href="../../css/shared/basket.css" rel="stylesheet">
+    <link href="../../css/shared/basket.css" rel="stylesheet">
+    <link href="../../css/main.css" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+    <div class="container header-content">
+        <!--Logo-->
+        <a href="../../index.html" class="logo">Square Eyes</a>
+        <!--Main navigation-->
+        <nav class="menu collapsed" id="main-menu" aria-label="Main site navigation">
+            <ul>
+                <li><a href="../../index.html">Home</a></li>
+                <li><a href="../../browse.html">Movies</a></li>
+                <li><a href="../../aboutus.html">About us</a></li>
+                <li><a href="../../contact.html">Contact</a></li>  
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <!--Dropdown menu for mobile nav-->
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <!--Shopping Cart-->
+            <div class="basket-container">
+                <button id="basket-toggle" class="basket-button" aria-label="Toggle shopping cart" aria-expanded="false" aria-controls="basket-dropdown">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="basket-count">0</span>
+                </button>
+                <div class="basket-dropdown" id="basket-dropdown" hidden>
+                    <ul id="basket-list" class="basket-list" aria-label="Basket items"></ul>
+                    <button id="checkout-btn" class="checkout-button">Checkout</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>  
+<main class="confirmation-main">
+    <section class="confirmation-box">
+        <h1>Thank you for your purchase!</h1>
+        <img id="confirmation-cover" src="#" alt="Movie cover"/>
+        <h2 id="confirmation-title">Movie Title</h2>
+        <p>You can now access the movie in your account's library. A detailed receipt has been sent to your email for your reference. Should you have any questions or need assistance, feel free to contact our support team</p>
+        <a class="cta-watch" href ="../../index.html">Watch now</a>
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="container footer-content">
+        <nav class="footer-social" aria-label="Social media links">
+            <ul>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" aria-label="Youtube"><i class="fa-brands fa-square-youtube"></i></a></li>
+                <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+            </ul>
+        </nav>
+    <!--Legal Links-->
+    <section class="footer-legal" aria-label="Legal information">
+        <h2 class="visually-hidden">Legal terms</h2>
+        <ul>
+            <li><a href="index.html" class="terms">Customize cookies</a></li>
+            <li><a href="index.html" class="terms">Terms of use</a></li>
+            <li><a href="index.html" class="terms">Guidelines for privacy</a></li>
+        </ul>
+    </section>
+    <!--Copyright-->
+      <section class="footer-copy" aria-label="Copyright">
+          <h2 class="visually-hidden">All rights reserved</h2>
+          <p>&copy; 2025 Square Eyes Inc. All Rights Reserved</p>
+      </section>
+    </div>     
+</footer>
+<!--Javascript files-->
+<script type="module" src="../../js/pages/index.js"></script>
+<script type="module" src="../../js/basket/basket.js"></script>
+<script type="module" src="../../js/checkout/confirmation.js"></script>
+<script src="../../js/shared/menu.js"></script> 
+</body>
+</html>

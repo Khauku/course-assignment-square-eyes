@@ -1,0 +1,15 @@
+
+/* colors */
+:root {
+    --text-color: #F2E9E9;
+    --accent-color: #D8D063;
+    --backround-dark: #030610;
+    --soft-white: #EDE2E2;
+    --muted-text: #BFABAB;
+    --border-color: #5E5656;
+
+
+    /* Fonts */
+    --font-base: "Inter", sans-serif;
+    --font-heading: "Koulen", sans-serif;
+}

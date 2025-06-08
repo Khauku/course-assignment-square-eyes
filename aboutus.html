@@ -14,75 +14,96 @@
     <title>Square Eyes | About Us</title>
     <meta name="description" content="Learn more about Square Eyes, and how we bring movies from creators to audiences">
     <link href="/css/pages/aboutus.css" rel="stylesheet">
-    <link href="/css/shared/base.css" rel="stylesheet">
+    <link href="/css/shared/global.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
 </head>
 <body>
-    <!--Square Eyes Logo - Menu-->
-    <header>
+<header class="site-header">
+    <div class="container header-content">
+        <!--Logo-->
         <a href="index.html" class="logo">Square Eyes</a>
-    <nav class="menu">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="browse.html">Movies</a></li>
-            <li><a href="aboutus.html">About us</a></li>
-            <li><a href="contact.html">Contact</a></li>  
-        </ul>
-    </nav>
-    </header>
-    <main>
-        <!--About Square Eyes-->
-        <section class="about-section">
-          <div class="about-content">
-            <div class="about-square-eyes">
-               <h1>About Square Eyes</h1>
+        <!--Main navigation-->
+        <nav class="menu collapsed" id="main-menu" aria-label="Main site navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="browse.html">Movies</a></li>
+                <li><a href="aboutus.html">About us</a></li>
+                <li><a href="contact.html">Contact</a></li>  
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <!--Dropdown menu for mobile nav-->
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <!--Shopping Cart-->
+            <div class="basket-container">
+                <button id="basket-toggle" class="basket-button" aria-label="Toggle shopping cart" aria-expanded="false" aria-controls="basket-dropdown">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="basket-count">0</span>
+                </button>
+                <div class="basket-dropdown" id="basket-dropdown" hidden>
+                    <ul id="basket-list" class="basket-list" aria-label="Basket items"></ul>
+                    <button id="checkout-btn" class="checkout-button">Checkout</button>
+                </div>
             </div>
-            <div class="about-square">
-                <p>Square Eyes is a film site created by a team of passionate<br>movie lovers that loves connecting movie-lovers. We offer<br>high-quality movie downloads directly from filmmakers,<br>ensuring you experience films in the best possible quality on<br> your computer.</p>
-            </div>
-        <!--Contact Square Eyes-->
-            <div class="contact-us">
-                <h2>If you have any questions feel free to contact us!</h2>
-            </div>
-            <button class="cta">Contact us</button>
-            <div class="driven-by-text">
-                <h3>Square Eyes is driven by:</h3>
-            </div>
-            <div class="inc-text">
+        </div>
+    </div>   
+</header>
+<main aria-label ="About Square Eyes">
+    <section class="about-section">
+        <h1 class="visually-hidden">About Square Eyes sections</h1>
+        <div class="about-content">
+            <article class="about-square-eyes">
+                <h2>About Square Eyes</h2>
+                <p>
+                    Square Eyes is a film site created by a team of passionate<br>movie lovers that loves connecting movie-lovers. We offer<br>
+                    high-quality movie downloads directly from filmmakers,<br>ensuring you experience films in the best possible quality on<br> your computer.
+                </p>
+            </article>
+            <section class="contact-us">
+                <h2>Have questions?</h2>
+                <p>Feel free to reach out to us anytime - we're happy to help!</p>
+                <button class="cta">Contact us</button>
+            </section>
+            <section class="company-info" aria-labelledby="driven-by">
+                <h3 id="driven-by">Square Eyes is driven by:</h3>
                 <p><span class="inc-highlight">Square Eyes Inc.</span> (Org. nr. 900 000 00MVA)</p>
-            </div>
-            <div class="adress-text">
-                <p>1234 Elmwood Drive<br>Springfield, IL 62704<br>United States</p>
-            </div>   
-          </div>    
-        </section>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-social" aria-label="Social media links">
+            </section>
+            <address class="adress-text">
+                1234 Elmwood Drive<br>
+                Springfield, IL 62704<br>
+                United States
+            </address>   
+        </div>    
+    </section>
+</main>
+<footer class="site-footer">
+    <div class="container footer-content">
+        <nav class="footer-social" aria-label="Social media links">
             <ul>
                 <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
                 <li><a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
                 <li><a href="#" aria-label="Youtube"><i class="fa-brands fa-square-youtube"></i></a></li>
                 <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
             </ul>
-        </div>
-        <!--Legal Links-->
-        <section class="footer-legal" aria-label="Legal information">
-            <h2 class="visually-hidden">Legal terms</h2>
-            <ul>
-                <li><a href="index.html" class="terms">Customize cookies</a></li>
-                <li><a href="index.html" class="terms">Terms of use</a></li>
-                <li><a href="index.html" class="terms">Guidelines for privacy</a></li>
-            </ul>
-        </section>
-        <!--Copyright-->
-        <section class="footer-copy" aria-label="Copyright">
-            <h2 class="visually-hidden">All rights reserved</h2>
-            <p>&copy; 2025 Square Eyes Inc. All Rights Reserved</p>
-         </section>
-        </div>     
-    </footer>
+        </nav>
+    <!--Legal Links-->
+    <section class="footer-legal" aria-label="Legal information">
+        <h2 class="visually-hidden">Legal terms</h2>
+        <ul>
+            <li><a href="index.html" class="terms">Customize cookies</a></li>
+            <li><a href="index.html" class="terms">Terms of use</a></li>
+            <li><a href="index.html" class="terms">Guidelines for privacy</a></li>
+        </ul>
+    </section>
+    <!--Copyright-->
+      <section class="footer-copy" aria-label="Copyright">
+          <h2 class="visually-hidden">All rights reserved</h2>
+          <p>&copy; 2025 Square Eyes Inc. All Rights Reserved</p>
+      </section>
+    </div>     
+</footer>
 <script src="/js/shared/menu.js"></script>
 <script src="/js/basket/basket.js"></script>
 </body>

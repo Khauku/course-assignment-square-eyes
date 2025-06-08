@@ -3,3 +3,5 @@
 @import url('./shared/header.css');
 @import url('./shared/footer.css');
 @import url('./shared/basket.css');
+@import url('./shared/global.css');
+@import url('./shared/root.css');

@@ -1,4 +1,4 @@
-import { initBasketUI, redirectToCheckout } from "../basket/basket.js";
+import { initBasketUI, redirectToCheckout } from "../../basket/basket.js";
 
 /* Toast message pop up - added to cart */ 
 function showToastMessage(message) {
@@ -21,8 +21,12 @@ document.addEventListener("DOMContentLoaded", () => {
         checkoutBtn.addEventListener("click", redirectToCheckout);
     }
 
-// Display Api- Movies //
+    const apiUrl = "https://v2.api.noroff.dev/square-eyes";
+    const apiMovieContainer = document.getElementById("api-movie-container");
 
+    let allMovies = [];
+
+// Display Api- Movies //
 function displayMovies(movies) {
     const apiMovieContainer = document.getElementById("api-movie-container");
     apiMovieContainer.innerHTML = "";
@@ -62,14 +66,26 @@ function displayMovies(movies) {
     });
 }
 
-const apiUrl = "https://v2.api.noroff.dev/square-eyes";
+// Genre Filter //
+const genreButtons = document.querySelectorAll (".genre-btn");
 
-const options = {
-    method: "GET",
-    headers: {
-        "Content-Type": "application/json",
-    }
-};
+genreButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        const selectedGenre = button.dataset.genre;
+
+        genreButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        if (selectedGenre === "all") {
+            displayMovies(allMovies);
+        } else {
+            const filtered = allMovies.filter(movie =>
+                movie.genre && movie.genre.toLowerCase() === selectedGenre.toLowerCase()
+            );
+            displayMovies(filtered);
+        }
+    });
+});
 
 // Fetch Api- Movies //
 async function fetchMovies() {
@@ -77,12 +93,13 @@ async function fetchMovies() {
     apiMovieContainer.innerHTML = `<div class="loading-spinner"></div>`;
 
     try {
-        const response = await fetch(apiUrl, options);
+        const response = await fetch(apiUrl);
         if (!response.ok) {
             throw new Error(`HTTP error! Status: ${response.status}`);
         }
         const data = await response.json();
-        displayMovies(data.data || data);
+        allMovies = data.data || data;
+        displayMovies(allMovies);
     } catch (error) {
         apiMovieContainer.innerHTML = "<p class='error-message'>Failed to load movies. Please try again</p>";
         alert("Something went wrong while fetching movies");

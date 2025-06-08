@@ -3,135 +3,162 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Metadata-->
+    <title>Square Eyes | Secure Checkout</title>
+    <meta name="description" content="Complete your purchase safely and securely. Finalize your movie order.">
     <!--Preconnect Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Koulen&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
-    <!--Font awesome icons-->
+    <!--Font Awesome Icons-->
     <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>
-    <!--Metadata & stylesheets-->
-    <title>Square Eyes | Secure Checkout</title>
-    <meta name="description" content="Complete your purchase safely and securely. Finalize your movie order.">
-    <link href="/css/pages/checkout.css" rel="stylesheet">
-    <link href="/css/shared/base.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
+    <!--Stylesheets-->
+    <link href="../css/shared/root.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/pages/checkout.css" rel="stylesheet">
 </head>
 <body>
-<header> 
-    <a href="../index.html" class="logo">Square Eyes</a>
-    <nav class="menu">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../browse.html">Movies</a></li>
-            <li><a href="../aboutus.html">About us</a></li>
-            <li><a href="../contact.html">Contact</a></li>  
-        </ul>
-    </nav>
-    <button class="menu-toggle" aria-label="Toggle menu">
-        <i class="fa-solid fa-bars"></i>
-    </button>
-    <div class="basket-container">
-        <button id="basket-toggle" class="basket-button" aria-expanded="false" aria-controls="basket-dropdown">
-            <i class="fa-solid fa-cart-shopping"></i>
-            <span id="basket-count">0</span>
-        </button>
-
-        <div class="basket-dropdown" id="basket-dropdown" style="display: none;">
-            <ul id="basket-list" class="basket-list"></ul>
-            <button id="checkout-btn">Checkout</button>
+<header class="site-header">
+    <div class="container header-content">
+        <!--Logo-->
+        <a href="../index.html" class="logo">Square Eyes</a>
+        <!--Main navigation-->
+        <nav class="menu collapsed" id="main-menu" aria-label="Main site navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../browse.html">Movies</a></li>
+                <li><a href="../aboutus.html">About us</a></li>
+                <li><a href="../contact.html">Contact</a></li>  
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <!--Dropdown menu for mobile nav-->
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <!--Shopping Cart-->
+            <div class="basket-container">
+                <button id="basket-toggle" class="basket-button" aria-label="Toggle shopping cart" aria-expanded="false" aria-controls="basket-dropdown">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="basket-count">0</span>
+                </button>
+                <div class="basket-dropdown" id="basket-dropdown" hidden>
+                    <ul id="basket-list" class="basket-list" aria-label="Basket items"></ul>
+                    <button id="checkout-btn" class="checkout-button">Checkout</button>
+                </div>
+            </div>
         </div>
-    </div>
+    </div>   
 </header>
-    <main>
-     <!--Toy Story Checkout Cart-->
-     <section class="grid-container"> 
-           <div class="left-column">
-             <h1>Confirm your purchase</h1>
-             <div class="checkout-movie-info">
-                <img id ="checkout-cover" alt="Movie cover" />
-                <div class="movie-text-details">
+<main>
+    <section class="grid-container" aria-labelledby="checkout-heading"> 
+        <div class="left-column">
+            <header class="checkout-heading">
+                <h1 id="checkout-heading">Confirm your purchase</h1>
+            </header>
+            <article class="checkout-movie-info" aria-label="Movie Summary">
+                <img id ="checkout-cover" src="#" alt="Selected movie cover">
+                <div class="movie-details">
                     <h2 id="checkout-title">Movie Title</h2>
                     <p id="checkout-price" class="checkout-meta">Price</p>
                 </div>
-             </div>
+            </article>
             <!--Payment Methods--> 
-              <h3>Payment methods:</h3>
-            <div class="card-icons">
-                <img src="../images/paypal.png" alt="Paypal" class="paypal">
-                <img src="../images/card.png" alt="Card 1" class="card">
-                <img src="../images/card2.png" alt="Card 2" class="card2">
-            </div>
+            <section aria-labelledby="payment-heading">
+                <h2 id="payment-heading">Payment methods:</h2>
+                <div class="card-icons">
+                    <img src="../images/icons/paypal.png" alt="Paypal" class="paypal">
+                    <img src="../images/icons/card.png" alt="Card 1" class="card">
+                    <img src="../images/icons/card2.png" alt="Card 2" class="card2">
+                </div>
+            </section>
             <!--Credit Card Checkout Form-->
-            <h4>Credit card:</h4>
-            <form class="checkout-form">
-                <div class="first-last-name-boxes">            
-                  <input type="text" id="first-name" class="input-firstname" name="first_name" placeholder="First name">
-                  <input type="text" id="last-name" class="input-lastname" name="last_name" placeholder="Last name">
-                </div>
-                <div class="cardnumber-box">
-                <input type="text" id="card-number" class="input-card-number" name="card_number" placeholder="Card number"> 
-                </div>
-                <div class="date-security-boxes">
-                  <input type="text" id="expiry-date" class="input-expiry-date" name="expiry-date" placeholder="MM/YY">
-                  <input type="text" id="security-code" class="input-security-code" name="security_code" placeholder="Security code">
-                </div>
-            </form>
-            <div class="cta-position">
-                <a href="confirmation/index.html" class="cta">Confirm payment</a>
-           </div> 
-         </div> 
-        </section>
+            <section aria-labelledby="credit-card-heading">
+                <h2 id="credit-card-heading">Credit card:</h2>
+                <form class="checkout-form">
+                    <fieldset>
+                        <legend class="visually-hidden">Cardholder name</legend>
+                        <div class="first-last-name-boxes">
+                            <label for="first-name" class="visually-hidden">First name</label>
+                            <input type="text" id="first-name" class="input-firstname" name="first_name" placeholder="First name" required>
+                            <label for="last-name" class="visually-hidden">Last name</label>
+                            <input type="text" id="last-name" class="input-lastname" name="last_name" placeholder="Last name" required>
+                        </div>
+                        <div class="cardnumber-box">
+                            <label for="card-number">Card Number</label>
+                            <input type="text" id="card-number" class="input-card-number" name="card_number" placeholder="Card number" required> 
+                        </div>
+                        <div class="date-security-boxes">
+                            <label for="expiry-date" class="visually-hidden">Expiry Date</label>
+                            <input type="text" id="expiry-date" class="input-expiry-date" name="expiry-date" placeholder="MM/YY" required>
+                            <label for="security-code" class="visually-hidden">Security Code</label>
+                            <input type="text" id="security-code" class="input-security-code" name="security_code" placeholder="Security code" required>
+                        </div>
+                    </fieldset>
+                    <div class="cta-position">
+                        <a href="confirmation/index.html" class="cta">Confirm payment</a>
+                    </div>
+                </form>
+            </section> 
+        </div>
         <!--After Purchase Info-->
-         <section class="right-column-top">
+        <div class="right-wrapper">
+            <aside class="right-column-top">
             <div class="square-logo">
                 <p>Square Eyes</p> 
             </div>
             <div class="after-purchase-text"> 
-                <h5>After Purchase</h5>         
+                <h4 id="after-purchase-text">After Purchase</h4>         
                 <p>After purchase is complete your<br>movie will be available to watch<br>under your profile.</p>
             </div>
-         </section>
-         <!--After Purchase Terms-->
-         <section class="right-column-bottom">
-            <div class="digital-delivery">
-                <h6>Digital Delivery</h6>
-            </div>
-            <div class="delivery-text">  
-                <p>Movies will be delivered digitally through our platform via streaming,<br> You may access the movie via the internet.</p>
-            </div>  
-            <div class="purchase-rights"> 
-                <h6>Purchase Rights</h6>
-            </div>
-            <div class="purchase-text">
-                <p>Upon successful purchase of a movie, you are granted<br>  
-                non-exclusive, non-transferable right to view the movie for<br> personal, non-commercial use. This Agreement does not transfer<br> any ownership or intellectual property rights to you. The movie<br> remains the property of its respective rights holder.</p>
-            </div>
-            <div class="terms-refund-text">
-                <p>Read the <span class="highlight-terms">Terms of Sale</span> and <span class="highlight-refund">Refund Policy</span> before purchasing.</p>
-            </div>
-         </section>
-    </main>
- <footer>     
-    <!--Social Media Icons-->  
-    <i class="fa-brands fa-instagram"></i>
-    <i class="fa-brands fa-x-twitter"></i>
-    <i class="fa-brands fa-youtube"></i>
-    <i class="fa-brands fa-tiktok"></i>
-  <!--Terms text-->
-    <section class="terms_text">
-        <h6>Legal terms</h6>
-       <a href="../index.html" class="terms">Customize cookies</a>
-       <a href="../index.html" class="terms">Terms of use</a>
-       <a href="../index.html" class="terms">Guidelines for privacy</a>
+            </aside>
+            <aside class="right-column-bottom">
+                <h3 id="terms-heading" class="visually-hidden">Purchase Information</h3>
+                <article class="digital-delivery">
+                    <h4>Digital Delivery</h4>
+                    <p>Movies will be delivered digitally through our platform via streaming,<br> You may access the movie via the internet.</p>
+                </article>  
+                <article class="purchase-rights"> 
+                    <h4>Purchase Rights</h4>
+                    <p>Upon successful purchase of a movie, you are granted<br>  
+                    non-exclusive, non-transferable right to view the movie for<br> personal, non-commercial use. This Agreement does not transfer<br> any ownership or intellectual property rights to you. The movie<br> remains the property of its respective rights holder.</p>
+                </article>
+                <p class="terms-refund-text">
+                    Read the <span class="highlight-terms">Terms of Sale</span> and <span class="highlight-refund">Refund Policy</span> before purchasing.
+                </p>
+            </aside>
+        </div>
     </section>
-    <section class="all_rights_text">
-        <h6>All rights Resereved</h6>
-        <p>© 2024 Square Eyes Inc. All Rights Reserved.</p>
-     </section>
- </footer>
- <script type="module" src="../js/basket.js"></script>
- <script type="module" src="../js/checkout.js"></script>
- <script src="../js/menu.js"></script>
+</main>
+<footer class="site-footer">
+    <div class="container footer-content">
+        <nav class="footer-social" aria-label="Social media links">
+            <ul>
+                <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
+                <li><a href="#" aria-label="Youtube"><i class="fa-brands fa-square-youtube"></i></a></li>
+                <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
+            </ul>
+        </nav>
+    <!--Legal Links-->
+    <section class="footer-legal" aria-label="Legal information">
+        <h2 class="visually-hidden">Legal terms</h2>
+        <ul>
+            <li><a href="index.html" class="terms">Customize cookies</a></li>
+            <li><a href="index.html" class="terms">Terms of use</a></li>
+            <li><a href="index.html" class="terms">Guidelines for privacy</a></li>
+        </ul>
+    </section>
+    <!--Copyright-->
+      <section class="footer-copy" aria-label="Copyright">
+          <h2 class="visually-hidden">All rights reserved</h2>
+          <p>&copy; 2025 Square Eyes Inc. All Rights Reserved</p>
+      </section>
+    </div>     
+</footer>
+<script type="module" src="../js/basket/basket.js"></script>
+<script type="module" src="../js/checkout/checkout.js"></script>
+<script src="../js/shared/menu.js"></script>
 </body>
 </html>

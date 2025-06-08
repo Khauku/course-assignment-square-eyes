@@ -18,7 +18,7 @@
         <link href="/css/pages/browse/browse.css" rel="stylesheet">
         <link href="/css/pages/browse/filter.css" rel="stylesheet">
         <link href="/css/shared/api-movies.css" rel="stylesheet">
-        <link href="/css/shared/base.css" rel="stylesheet">
+        <link href="/css/shared/global.css" rel="stylesheet">
         <link href="/css/main.css" rel="stylesheet">
 </head>
 <body>
@@ -76,12 +76,14 @@
     <!--Movie scroll number 1-->
     <section class="section_movie_container">
         <h1 class="visually-hidden">Movies to purchase</h1>
-        <div>
+        <div class="container movie_categories">
             <h2>Newly added</h2>
+        </div>
+        <div class="movie-scroll-container-api">
             <div id= "api-movie-container"></div>
         </div>
         <div class="container movie_categories">
-            <h2>Featured movies:</h2>
+            <h2>Featured:</h2>
         </div>
         <div class="movie-scroll-container" role="region" aria-label="Scrollable list of feautured movies" tabindex="0">
             <ul class="movie_covers">
@@ -117,7 +119,7 @@
         <!--Movie scroll number 2-->
         <section class="movie-scroll-container-2">
             <div class="container movie_categories">
-                <h2>Acadamy award winning movies:</h2>  
+                <h2>Acadamy award winning:</h2>  
             </div> 
             <div class="movie-scroll-container" role="region" aria-label="Scrollable list of feautured movies" tabindex="0">
                 <ul class="movie_covers">
@@ -174,6 +176,6 @@
 </footer>
 <script src="/js/shared/menu.js"></script>
 <script type="module" src="/js/basket/basket.js"></script>
-<script type="module" src="/js/pages/browse.js"></script>
+<script type="module" src="/js/pages/browse/browse.js"></script>
 </body>
 </html>

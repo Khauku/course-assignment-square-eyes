@@ -1,7 +1,7 @@
 
 /* Toy Story background image */
 .welcome_toystory {
-    background-image: url(/images/toystory-info3.jpg);
+    background-image: url(/images/stills/toystory-info3.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -151,42 +151,7 @@ h3 { /* Price - 135 kr */
 
 /* Smaller Sizes */
 
-@Media (max-width: 1180px) and (min-width: 757px) {
-    .all_rights_text {
-        position: absolute;
-        right: 10%;
-    }
-
-    .terms_text {
-        display: none;
-    }
-
-    .logo {
-        margin-right: 80px;
-    }
-
-    .menu {
-        margin-left: 80px;
-    }
-}
-
 @Media (max-width: 757px) and (min-width: 570px) {
-    .logo {
-        font-size: 18px;
-        padding: 10px; 
-    }
-
-    .menu {
-        font-size: 12px;
-        gap: 30px;
-    }
-
-    .search_bar {
-        width: 100%;
-        margin-top: 10px;
-        padding: 6px;
-    }
-
      /* Info About the Movie Toy Story */ 
      .movie_title h1 {
         position: relative;
@@ -242,17 +207,6 @@ h3 { /* Price - 135 kr */
 }
 
 @Media (max-width: 570px) and (min-width: 430px) {
-
-    .logo {
-        font-size: 15px;
-    }
-
-    .menu {
-        font-size: 12px;
-        gap: 30px;
-        margin-left: 80px;
-    }
-
     /* Toy Story background image */
     .welcome_toystory {
         min-height: 45vh;
@@ -330,37 +284,6 @@ h3 { /* Price - 135 kr */
 
 /* Media Iphone 14 Pro Max */ 
 @media (max-width: 430px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-        width: 100%;
-    } 
-
-    .logo {
-        position: static;
-        font-size: 15px;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-right: 20px;
-        white-space: nowrap;
-    }
-
-    .menu {
-        font-size: 12px;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    .menu ul {
-        gap: 0px;
-        padding: 0;
-        margin: 0;
-    }
     /* Toy Story background image */
     .welcome_toystory {
         min-height: 45vh;

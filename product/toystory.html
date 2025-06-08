@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Metadata-->
+    <title>Buy Toy Story | Movie Details & Streaming Info / Square Eyes</title>
+    <meta name="description" content="Discvover Toy Story's full movie details including release year, genre, and duration. Buy and stream Toy Story instantly on Square Eyes">
     <!--Preconnect Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,88 +14,104 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Koulen&display=swap" rel="stylesheet">
     <!--Font awesome icons-->
     <script src="https://kit.fontawesome.com/d10e164dbb.js" crossorigin="anonymous"></script>
-    <!--Metadata & stylesheets-->
-    <title>About Toystory</title>
-    <meta name="description" content="Info about the movie Toy Story">
-    <link href="/css/pages/toystory.css" rel="stylesheet">
-    <link href="/css/main.css" rel="stylesheet">
-    <link href="/css/shared/base.css" rel="stylesheet">
+    <!--Stylesheets-->
+    <link href="../css/main.css" rel="stylesheet">
+    <link href="../css/pages/toystory.css" rel="stylesheet">
 </head>
 <body>
-    <!--Square Eyes Logo - Menu-->
-    <header> 
-        <a href="../index.html" class="logo">Square Eyes</a>
-    <nav class="menu">
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../movies.html">Movies</a></li>
-            <li><a href="../aboutus.html">About us</a></li>
-            <li><a href="../contact.html">Contact</a></li>  
-        </ul>
-    </nav>
-    </header>
-    <main>
-        <!--Toy Story background image-->
-        <div class="welcome_toystory">
-            <p class="img_source">Picture from Shotdeck.com</p>
+<header class="site-header">
+    <div class="container header-content">
+        <!--Logo-->
+        <a href="index.html" class="logo">Square Eyes</a>
+        <!--Main navigation-->
+        <nav class="menu collapsed" id="main-menu" aria-label="Main site navigation">
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../browse.html">Movies</a></li>
+                <li><a href="../aboutus.html">About us</a></li>
+                <li><a href="../contact.html">Contact</a></li>  
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <!--Dropdown menu for mobile nav-->
+            <button class="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="main-menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <!--Shopping Cart-->
+            <div class="basket-container">
+                <button id="basket-toggle" class="basket-button" aria-label="Toggle shopping cart" aria-expanded="false" aria-controls="basket-dropdown">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="basket-count">0</span>
+                </button>
+                <div class="basket-dropdown" id="basket-dropdown" hidden>
+                    <ul id="basket-list" class="basket-list" aria-label="Basket items"></ul>
+                    <button id="checkout-btn" class="checkout-button">Checkout</button>
+                </div>
+            </div>
         </div>
-        <!--Info About the Movie Toy Story-->
-        <section class="movie_info_container">
-            <div class="movie_title">
+    </div>   
+</header>
+<main>
+    <div class="welcome_toystory">
+        <p class="img_source">Picture from Shotdeck.com</p>
+    </div>
+    <!--Info About the Movie Toy Story-->
+    <section class="movie_info_container">
+        <div class="movie_title">
               <h1>Toy Story</h1>
-            </div>
-            <div class="movie_info">
-                <p class="m_info">Animation 1995 1h 20m</p>
-                <p class="m_info">Starring: Tom Hanks, Tim Allen and Wallace Shawn</p>
-                <p class="m_info>">Directed by: John Lasseter</p>
-            </div>
-        </section>
-        <!--Toy Story Movie Description-->
-        <div class="movie_about">
-            <h2>Toy Story follows Woody, a cowboy doll, and Buzz Lightyear, a space ranger,<br>as they go from rivals to friends while navigating life as toys. The movie explores themes of<br>friendship and loyalty.</h2>
         </div>
-        <!--Resolution Icons-->
-        <div class="movie_res_container">
-            <div class="res_icons">
-                <img src="../images/4k.jpg" alt="4K icon" class="fk">
-                <img src="../images/hd.jpg" alt="HD icon" class="hd">
-            </div>
+        <div class="movie_info">
+            <p class="m_info">Animation 1995 1h 20m</p>
+            <p class="m_info">Starring: Tom Hanks, Tim Allen and Wallace Shawn</p>
+            <p class="m_info>">Directed by: John Lasseter</p>
+        </div>
+    </section>
+    <!--Toy Story Movie Description-->
+    <div class="movie_about">
+            <h2>Toy Story follows Woody, a cowboy doll, and Buzz Lightyear, a space ranger,<br>as they go from rivals to friends while navigating life as toys. The movie explores themes of<br>friendship and loyalty.</h2>
+    </div>
+    <!--Resolution Icons-->
+    <div class="movie_res_container">
+        <div class="res_icons">
+            <img src="../images/icons/4k.jpg" alt="4K icon" class="fk">
+            <img src="../images/icons/hd.jpg" alt="HD icon" class="hd">
+        </div>
         <!--IMDB Rating-->
-            <div class="imdb_text">
-                <p><span class="imdb_caps">imdb</span> rating: 8,1</p>
-            </div>
-        </div> 
-        <!--Price and Purchase Button-->
-           <h3>135 kr</h3>
-         <div class="checkout">
-           <a href="/checkout.html" class="cta">Purchase</a>
-         </div>
-    </main>
-    <footer class="site-footer">
-        <div class="footer-content">
-            <div class="footer-social" aria-label="Social media links">
+        <div class="imdb_text">
+            <p><span class="imdb_caps">imdb</span> rating: 8,1</p>
+        </div>
+    </div> 
+    <!--Price and Purchase Button-->
+    <h3>135 kr</h3>
+    <div class="checkout">
+        <a href="/checkout.html" class="cta">Purchase</a>
+    </div>
+</main>
+<footer class="site-footer">
+    <div class="container footer-content">
+        <nav class="footer-social" aria-label="Social media links">
             <ul>
                 <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
                 <li><a href="#" aria-label="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a></li>
                 <li><a href="#" aria-label="Youtube"><i class="fa-brands fa-square-youtube"></i></a></li>
                 <li><a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a></li>
             </ul>
-        </div>
-        <!--Legal Links-->
-        <section class="footer-legal" aria-label="Legal information">
-            <h2 class="visually-hidden">Legal terms</h2>
-            <ul>
-                <li><a href="index.html" class="terms">Customize cookies</a></li>
-                <li><a href="index.html" class="terms">Terms of use</a></li>
-                <li><a href="index.html" class="terms">Guidelines for privacy</a></li>
-            </ul>
-        </section>
-        <!--Copyright-->
-        <section class="footer-copy" aria-label="Copyright">
-            <h2 class="visually-hidden">All rights reserved</h2>
-            <p>&copy; 2025 Square Eyes Inc. All Rights Reserved</p>
-         </section>
-        </div>     
-    </footer>
+        </nav>
+    <!--Legal Links-->
+    <section class="footer-legal" aria-label="Legal information">
+        <h2 class="visually-hidden">Legal terms</h2>
+        <ul>
+            <li><a href="index.html" class="terms">Customize cookies</a></li>
+            <li><a href="index.html" class="terms">Terms of use</a></li>
+            <li><a href="index.html" class="terms">Guidelines for privacy</a></li>
+        </ul>
+    </section>
+    <!--Copyright-->
+      <section class="footer-copy" aria-label="Copyright">
+          <h2 class="visually-hidden">All rights reserved</h2>
+          <p>&copy; 2025 Square Eyes Inc. All Rights Reserved</p>
+      </section>
+    </div>     
+</footer>
 </body>
 </html>

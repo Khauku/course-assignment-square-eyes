@@ -1,232 +1,92 @@
 
 
 
-h1 { /* About square Eyes heading*/
-    font-family: "Koulen", sans-serif;
-    font-style: normal;
-    font-size: 30px;
-    color: #D8D063;
-    white-space: nowrap;
+h2, h3 {
+    font-family: var(--font-base);
+    font-weight: 300;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+} 
+
+.about-square-eyes h2 {
+    font-size: 3rem;
+    color: var(--text-color);
+}
+
+h2 {
+    font-size: 1.25rem;
+}
+
+h3 {
+    font-size: 1rem;
+    margin-top: 2rem;
 }
 
 .about-section {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center; 
-    box-sizing: border-box;
-    width: 100%;
-    padding: 20px;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    justify-content: center;
+    padding: 2rem 1rem;
+    margin-block: 3rem;
 }
 
 .about-content {
-    border: 0.5px solid #5E5656;
-    border-radius: 15px;
-    padding: 40px;
-    padding-bottom: 30px;
-    position: relative;
-    max-width: 600px;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 2.5rem;
+    max-width: 700px;
     width: 100%;
+    background-color: var(--background-soft);
     box-sizing: border-box;
 }
 
-.about-square {
-    font-family: "Inter", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 19px;
-    color: #fff;
-    margin-bottom: 60px;
-    overflow-x: hidden;
-    box-sizing: border-box; 
+.about-square-eyes p,
+.contact-us p {
+    font-family: var(--font-base);
+    font-weight: 300;
+    font-size: 1rem;
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-bottom: 2rem;
 }
 
-/* Contact Square Eyes */
-
-.contact-us {
-    font-family: "Inter", sans-serif;
-    color: #fff;
-    font-size: 16px;
-    font-weight: 100;
-    margin-bottom: 35px;
-}
-
-h2 {  /* Feel free to contact us text */
-    font-family: "Inter", sans-serif;
-    color: #fff;
-    font-size: 15px;
-    font-weight: 200;
-}
-
+/* cta */ 
 .cta {
-    color: #fff;
-    padding: 5px 10px;
-    background-color: black;
-    border-color: #fff;
-    border-radius: 12px;
-    border: solid 1px;
-    font-size: 15px;
-    margin-bottom: 50px;
-  }
+    display: inline-block;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    background-color: var(--background-dark);
+    color: var(--text-color);
+    font-weight: 500;
+    margin-bottom: 3rem;
+    cursor: pointer;
+    box-shadow: none;
+    border: 1px solid var(--text-color);
+    text-transform: uppercase;
+}
 
 .cta:hover {
-    background-color: #fff;
-    color: #000;
+    background-color: var(--text-color);
+    color: var(--background-dark);
 }
 
-.inc-text {
-    font-family: "Inter", sans-serif;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 100;
-    margin-bottom: 20px;
-}
-
-.inc-highlight {
+/* company info */
+address {
+    font-family: var(--font-base);
+    font-size: 0.875rem;
     font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 1rem;
 }
 
-.adress-text {
-    font-family: "Inter", sans-serif;
-    color: #fff;
-    font-size: 12px;
-    font-weight: 100;
-    line-height: 30px;
+.inc-higlight {
+    font-weight: 500;
 }
 
-/* Smaller Screens */
 
-@Media (max-width: 1180px) and (min-width: 757px)  {
-    .all_rights_text {
-        position: absolute;
-        right: 10%;
-    }
 
-    .terms_text {
-        display: none;
-    }
 
-    .logo {
-        font-size: 18px;
-        margin-right: 80px;
-    }
 
-    .about-section {
-        position: relative;
-        left: 60px;
-    }
 
-}
 
-@Media (max-width: 757px) and (min-width: 570px) {
-
-    /* Header */
-    .logo {
-        font-size: 18px;
-        margin-right: 80px;
- 
-    }
-
-    .menu {
-        font-size: 12px;
-        gap: 30px;
-    }
-
-    .about-section {
-        position: relative;
-        left: 60px;
-    }
-
-}
-
-@Media (max-width: 570px) and (min-width: 430px) {
-
-    .logo {
-        font-size: 15px;
-    }
-
-    .menu {
-        font-size: 12px;
-        gap: 30px;
-        margin-left: 80px;
-    }
-
-    .about-section {
-        position: relative;
-        left: 80px;
-        border: none;
-    }
-
-    .about-content {
-        border: none;
-    }
-
-}
-
-/* Media Iphone 14 Pro Max */ 
-@media (max-width: 430px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px;
-        width: 100%;
-    } 
-
-    .logo {
-        position: static;
-        font-size: 15px;
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-right: 20px;
-    }
-
-    .menu {
-        font-size: 12px;
-        flex-direction: column;
-        align-items: flex-start;
-        width: 100%;
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
-
-    .menu ul {
-        gap: 0px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .about-section {
-        display: flex;
-        padding: 10px;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        left: 0;
-        margin-bottom: 100px;
-    }
-
-    h1 {
-        font-size: 24px;
-        margin: 0 auto;
-    }
-
-    .about-content {
-        padding: 20px;
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    .about-square {
-        font-size: 16px;
-        margin: 0 auto;
-    }
-
-    .cta {
-        font-size: 14px;
-    }
-}
