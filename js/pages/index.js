@@ -31,7 +31,7 @@ function displayMovies(movies) {
         movieElement.classList.add("movie");
         movieElement.innerHTML = `
           <div class="movie-wrapper">
-               <a href="/movie-details/index.html?id=${movie.id}">
+               <a href="movie-details/index.html?id=${movie.id}">
                  <img src="${movie.image.url}" alt="${movie.image.alt}" class="movie-image">
                </a>
                <div class="cart-hover-icon" 
